@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>The stats of mobiles</title>
+</head>
+<body>
+<table>
+{% for i in ls %}
+<tr>
+<td>{{i.valname}}</td>
+<td>{{i.valsize}}</td>
+<td>{{i.valprice}}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
