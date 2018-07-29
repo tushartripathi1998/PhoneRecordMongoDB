@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>
+  update the cost
+  </title>
+</head>
+<body>
+<!--to check a drop down list-->
+<!--select>
+  {% for i in ls %}
+  <option>{{i.valname}}</option>
+  {% endfor %}
+</select-->
+<!--
+  <form method="post" action="/update">
+  <table>
+  <tr>
+  <td>oldname:
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+      {% for i in ls %}
+      <option value="{{i.valname}}">
+      {% endfor %}
+    </datalist>
+  </td>
+  <td>newname:  <input name='toup2'></td>
+  <td><button type="submit">update it</button></td>
+  </tr>
+  </table>
+</form>
+-->
+<form method='post' action="/update">
+<select name="browser" autofocus>
+  {% for i in ls %}
+  <option>{{i.valname}}</option>
+  {% endfor %}
+</select>
+<br>
+<input name='toup2'>
+<button type="submit">update it</button>
+</form>
+
+</body>
+</html>

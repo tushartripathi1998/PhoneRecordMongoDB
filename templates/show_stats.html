@@ -1,16 +1,48 @@
 <html>
 <head>
   <title>The stats of mobiles</title>
+  <!--script>
+function func(id)
+{
+
+  alert(id);
+}
+</script-->
 </head>
 <body>
-<table>
-{% for i in ls %}
-<tr>
-<td>{{i.valname}}</td>
-<td>{{i.valsize}}</td>
-<td>{{i.valprice}}</td>
-</tr>
-{% endfor %}
-</table>
-</body>
+  searching a mobile ?
+  <a href="/see"><button>click to search</button></a>
+  <table>
+    {% for i in ls %}
+      <tr>
+        <td>{{i._id}}</td>
+        <td>{{i.valname}}</td>
+        <td>{{i.valsize}}</td>
+        <td>{{i.valprice}}</td>
+        <!--td><form methods="post" action=/de><var name="tosend" type="text"><button name="update">click</button></td-->
+        <!--td><button name="update" action="/change" onclick="alert('{{i._id}}');">click</button></td-->
+        </tr>
+      {% endfor %}
+    </table>
+    <br><br>
+    <form method="post" action="/delete">
+      Which one to delete ?
+      <select name="todel1" autofocus>
+        {% for i in ls %}
+        <option>{{i.valname}}</option>
+        {% endfor %}
+      </select>
+      <button type="submit">delete?</button>
+    </form>
+
+    <a href="/enter_data"><button>enter data</button></a>
+    <br>
+    <br>
+    <br>
+
+    update data ?
+    <br>
+    <a href="/enter_updated_data"><button>click</button></a><!--button>click</button></a-->
+
+  </body>
 </html>
